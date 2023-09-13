@@ -5,11 +5,11 @@ import (
 	"net"
 	"testing"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
+	"google.golang.org/protobuf/proto"
 
-	"github.com/mitchellh/go-grpc-net-conn/testproto"
+	"github.com/binarycraft007/go-grpc-net-conn/testproto"
 )
 
 func testStreamConn(

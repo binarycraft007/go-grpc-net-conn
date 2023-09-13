@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/mitchellh/go-grpc-net-conn/testproto"
+	"github.com/binarycraft007/go-grpc-net-conn/testproto"
 )
 
 func TestConn(t *testing.T) {
@@ -87,6 +87,8 @@ func TestConn_chunkedWrites(t *testing.T) {
 type testServer struct {
 	Send  [][]byte
 	Chunk int
+
+	testproto.UnimplementedTestServiceServer
 }
 
 func (s *testServer) Stream(stream testproto.TestService_StreamServer) error {
